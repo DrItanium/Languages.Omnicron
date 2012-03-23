@@ -1,0 +1,5 @@
+Filter is a library that supports cross application domain plugins. It has a
+FormConstructionLanguage that is used to define a simple GUI without actually
+defining the GUI as code. This prevents crashes from occuring.
+
+This library is licensed under the BSD license
