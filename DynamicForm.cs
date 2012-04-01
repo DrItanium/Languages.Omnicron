@@ -32,9 +32,9 @@ using System.Drawing;
 using System.Collections;
 using System.Windows.Forms;
 
-namespace Libraries.Filter
+namespace Languages.Omnicron
 {
-  public class DynamicForm : FilterDialogForm
+  public class DynamicForm : OmnicronDialogForm
   {
     private OpenFileDialog openFile;
     private SaveFileDialog saveFile;
@@ -94,7 +94,7 @@ namespace Libraries.Filter
     {
       if(!shouldApply)
       {
-        MessageBox.Show("Insufficient (or Invalid) Information Provided for Filter to be able to continue");
+        MessageBox.Show("Insufficient (or Invalid) Information Provided for Omnicron to be able to continue");
         shouldApply = true;
         return false;
       }

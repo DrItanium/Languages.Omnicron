@@ -43,7 +43,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace Libraries.Filter 
+namespace Languages.Omnicron 
 {
   public class FormConstructionLanguage 
   {

@@ -28,11 +28,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Libraries.Filter
+namespace Languages.Omnicron
 {
-    public interface IFilterCallback
+    public interface IOmnicronCallback
     {
-        Guid CurrentFilter { set; }
+        Guid CurrentOmnicronElement { set; }
         string Name { set; }
     }
 }

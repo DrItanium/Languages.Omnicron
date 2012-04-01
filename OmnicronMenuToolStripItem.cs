@@ -27,14 +27,23 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Drawing;
-using System.Collections;
+using System.Windows.Forms;
 
-namespace Libraries.Filter
+namespace Libraries.Omnicron
 {
-	public interface IFilter
+	public class OmnicronToolStripMenuItem : ToolStripMenuItem
 	{
-		Hashtable Transform(Hashtable input);
-		string Name { get; }
+		public Guid TargetOmnicronElement { get; set; }
+		public IOmnicronCallback Callback { get; set; }
+		public OmnicronToolStripMenuItem(Guid targetOmnicronElement, IOmnicronCallback callback)
+		{
+			TargetOmnicronElement = targetOmnicronElement;
+			Callback = callback;
+		}
+		protected override void OnClick(EventArgs e)
+		{
+			base.OnClick(e);
+			Callback.CurrentOmnicronElement = TargetOmnicronElement; //set this
+		}
 	}
 }

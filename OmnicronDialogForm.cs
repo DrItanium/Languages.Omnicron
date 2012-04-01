@@ -32,15 +32,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Libraries.Filter
+namespace Languages.Omnicron
 {
 	//TODO: Insert code to handle on the fly application
 	//      of given filters
-	public partial class FilterDialogForm : Form
+	public partial class OmnicronDialogForm : Form
 	{
 		protected bool shouldApply = true;
 		public bool ShouldApply { get { return shouldApply; } }
-		public FilterDialogForm()
+		public OmnicronDialogForm()
 		{
 			InitializeComponent();
 		}

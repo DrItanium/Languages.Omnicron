@@ -23,9 +23,9 @@
 //The views and conclusions contained in the software and documentation are those of the
 //authors and should not be interpreted as representing official policies, either expressed
 //or implied, of Joshua Scoggins. 
-namespace Libraries.Filter
+namespace Languages.Omnicron
 {
-    public partial class FilterDialogForm
+    public partial class OmnicronDialogForm
     {
         /// <summary>
         /// Required designer variable.
@@ -77,7 +77,7 @@ namespace Libraries.Filter
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
-            // FilterDialogForm
+            // OmnicronDialogForm
             // 
             //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -85,8 +85,8 @@ namespace Libraries.Filter
             this.ControlBox = false;
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.ok);
-            this.Name = "FilterDialogForm";
-            this.Text = "FilterdialogForm";
+            this.Name = "OmnicronDialogForm";
+            this.Text = "OmnicronDialogForm";
             this.ResumeLayout(false);
 
         }
