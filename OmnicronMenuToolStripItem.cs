@@ -29,7 +29,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Libraries.Omnicron
+namespace Languages.Omnicron
 {
 	public class OmnicronToolStripMenuItem : ToolStripMenuItem
 	{
