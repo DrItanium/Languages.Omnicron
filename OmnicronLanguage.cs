@@ -23,9 +23,6 @@
 //The views and conclusions contained in the software and documentation are those of the
 //authors and should not be interpreted as representing official policies, either expressed
 //or implied, of Joshua Scoggins. 
-//#define ADV_TESTING
-//#define PRECOMPUTED_TABLE
-//#define GENERATE_TABLE
 using System;
 using System.Reflection;
 using System.Text;
@@ -255,6 +252,9 @@ namespace Languages.Omnicron
         case "checkbox":
           dataStack.Push(new CheckBox());
           break;
+				case "richtextbox":
+					dataStack.Push(new RichTextBox());
+					break;
         default:
           throw new ArgumentException("Unknown type given");
       }

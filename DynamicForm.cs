@@ -50,43 +50,32 @@ namespace Languages.Omnicron
       saveFile.FileName = "";
       openFile = new OpenFileDialog();
       openFile.FileName = "";
-      openFile.FileOk += new System.ComponentModel.CancelEventHandler(OpenImageHandler);
+      openFile.FileOk += new System.ComponentModel.CancelEventHandler(GetFilePath);
 
     }
-    private void OpenImageHandler(object sender, System.ComponentModel.CancelEventArgs e)
-    {
-      try
-      {
-        //load an image
-        string path = openFile.FileName;
-        var image = new Bitmap(Image.FromFile(path));
-        byte[][] newImage = new byte[image.Width][];
-        for(int x = 0; x < image.Width; x++)
-        {
-          byte[] line = new byte[image.Height];
-          for(int y = 0; y < image.Height; y++)
-            line[y] = image.GetPixel(x,y).R; 
-          newImage[x] = line;
-        }
-        storageCells["otherImage"] = newImage;
-        shouldApply = true;
-      }
-      catch(Exception)
-      {
-        MessageBox.Show("Invalid File Type Given");
-        shouldApply = false;
-      }
-    }
+		private void GetFilePath(object sender, System.ComponentModel.CancelEventArgs e)
+		{
+			try
+			{
+				storageCells["openFile"] = openFile.FileName;
+				shouldApply = true;
+			}
+			catch(Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+				shouldApply = false;
+			}
+		}
     public void ButtonOpensFileDialog(Button b, bool addControl)
     {
       b.Click += new EventHandler(OnClick);
       if(addControl)
-      {
         Controls.Add(b);
-      }
     }
     private void OnClick(object sender, EventArgs e)
     {
+			//TODO: Change this so it's possible to have semi custom logic
+			//      for button presses
       var result = openFile.ShowDialog();
       shouldApply &= (result == DialogResult.OK || result == DialogResult.Yes);
     }
