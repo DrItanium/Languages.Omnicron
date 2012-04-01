@@ -1,4 +1,31 @@
 -- Alpha Trimmed Mean filter (partial code)
+form new 
+"Alpha Trimmed Mean Filter" "Text" imbue 
+label new 
+"Mask Size" "Text" imbue 
+"maskSizeLabel" "Name" imbue 
+13 35 point 
+"Location" imbue 
+63 13 size 
+"Size" imbue 
+"Controls.Add" imbue 
+combobox new 
+"mask" "Name" imbue 
+80 35 point 
+"Location" imbue 
+75 21 size 
+"Size" imbue 
+"3x3" "Items.Add" imbue 
+"5x5" "Items.Add" imbue 
+"7x7" "Items.Add" imbue 
+"9x9" "Items.Add" imbue 
+"11x11" "Items.Add" imbue 
+"13x13" "Items.Add" imbue 
+"15x15" "Items.Add" imbue 
+"17x17" "Items.Add" imbue 
+"19x19" "Items.Add" imbue 
+"21x21" "Items.Add" imbue 
+"Controls.Add" imbue 
 label new
 13 40 point "Location" imbue
 63 13 size "Size" imbue
@@ -9,3 +36,4 @@ textbox new
 80 40 point "Location" imbue
 "d" "Name" imbue
 "Controls.Add" imbue
+return

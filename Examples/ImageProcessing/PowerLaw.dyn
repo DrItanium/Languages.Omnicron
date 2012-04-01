@@ -1,23 +1,23 @@
 form new 
-\"Gamma Transformation\" \"Text\" imbue 
+"Gamma Transformation" "Text" imbue 
 label new
-\"xLabel\" \"Name\" imbue
-13 12 point \"Location\" imbue
-63 13 size \"Size\" imbue
-\"Gamma\" \"Text\" imbue
-\"Controls.Add\" imbue
+"xLabel" "Name" imbue
+13 12 point "Location" imbue
+63 13 size "Size" imbue
+"Gamma" "Text" imbue
+"Controls.Add" imbue
 label new
-\"yLabel\" \"Name\" imbue
-13 32 point \"Location\" imbue
-63 33 size \"Size\" imbue
-\"Constant\" \"Text\" imbue
-\"Controls.Add\" imbue
+"yLabel" "Name" imbue
+13 32 point "Location" imbue
+63 33 size "Size" imbue
+"Constant" "Text" imbue
+"Controls.Add" imbue
 textbox new
-\"gamma\" \"Name\" imbue
-80 12 point \"Location\" imbue
-\"Controls.Add\" imbue
+"gamma" "Name" imbue
+80 12 point "Location" imbue
+"Controls.Add" imbue
 textbox new
-\"constant\" \"Name\" imbue
-80 32 point \"Location\" imbue
-\"Controls.Add\" imbue
+"constant" "Name" imbue
+80 32 point "Location" imbue
+"Controls.Add" imbue
 return
