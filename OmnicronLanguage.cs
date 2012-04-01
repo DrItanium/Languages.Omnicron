@@ -45,7 +45,7 @@ using System.Drawing;
 
 namespace Languages.Omnicron 
 {
-  public class FormConstructionLanguage 
+  public class OmnicronLanguage 
   {
     private static object[] EmptyArray = new object[0];
     private Stack<object> dataStack;  
@@ -55,7 +55,7 @@ namespace Languages.Omnicron
       return EmptyArray;
     }
     private EnhancedLR1ParsableLanguage language;
-    public FormConstructionLanguage()
+    public OmnicronLanguage()
     {
       dataStack = new Stack<object>(); 
       EnhancedGrammar grammar = new EnhancedGrammar
