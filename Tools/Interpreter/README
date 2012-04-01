@@ -1,0 +1,2 @@
+This is a simple Interpreter that reads Omnicron scripts and displays what they
+will look like. This program will also describe errors in scripts as well. 

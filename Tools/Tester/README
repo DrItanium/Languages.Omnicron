@@ -1,0 +1,4 @@
+This program reads an Omnicron script and an associated code module to test the
+form and it's associated logic. The testing program has a library associated
+with it that the associated code module will use to allow the tester to hook
+into it.
