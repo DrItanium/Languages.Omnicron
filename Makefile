@@ -1,5 +1,5 @@
 .RECIPEPREFIX = >
-name := Libraries.Filter.dll 
+name := Languages.Omnicron.dll 
 thisdir := .
 cmd_library := -t:library
 cmd_out := -out:$(name)
@@ -26,7 +26,7 @@ options := -r:Libraries.Collections.dll \
 			  -r:System.Windows.Forms.dll \
 			  -r:System.Drawing.dll \
 			  -r:System.Data.dll \
-			  -win32res:FilterdialogForm.resx
+			  -win32res:.resx
 result := $(name)
 
 build: $(sources)
