@@ -1,0 +1,16 @@
+-- Form for Histogram Matching
+form new
+"Histogram Matching" "Text" imbue
+label new 
+"openLabel" "Name" imbue
+"Select Image" "Text" imbue
+13 12 point "Location" imbue
+63 13 size "Size" imbue
+"Controls.Add" imbue
+button new 
+"otherImage" "Name" imbue
+"Open" "Text" imbue
+75 23 size "Size" imbue
+80 12 point "Location" imbue
+"Controls.Add" imbue
+return

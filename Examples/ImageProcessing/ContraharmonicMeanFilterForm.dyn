@@ -1,0 +1,11 @@
+-- ContraHarmonic Mean Filter Additions
+label new
+"weightLabel" "Name" imbue
+"Order" "Text" imbue
+13 62 point "Location" imbue
+63 13 size "Size" imbue
+"Controls.Add" imbue
+textbox new
+"q" "Name" imbue
+80 62 point "Location" imbue
+"Controls.Add" imbue

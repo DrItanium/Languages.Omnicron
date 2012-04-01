@@ -1,0 +1,24 @@
+-- Scaling Filter Basic Form
+form new
+"Scaling Filter" "Text" imbue
+label new
+"labelWidth" "Name" imbue
+"Width" "Text" imbue
+13 12 point "Location" imbue
+63 13 size "Size" imbue
+"Controls.Add" imbue
+label new
+"labelHeight" "Name" imbue
+"Height" "Text" imbue
+63 13 size "Size" imbue
+13 32 point "Location" imbue
+"Controls.Add" imbue
+textbox new
+"width" "Name" imbue
+80 12 point "Location" imbue
+"Controls.Add" imbue
+textbox new
+"height" "Name" imbue
+80 32 point "Location" imbue
+"Controls.Add" imbue
+return

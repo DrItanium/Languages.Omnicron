@@ -1,0 +1,11 @@
+-- Alpha Trimmed Mean filter (partial code)
+label new
+13 40 point "Location" imbue
+63 13 size "Size" imbue
+"dLabel" "Name" imbue
+"D" "Text" imbue
+"Controls.Add" imbue
+textbox new
+80 40 point "Location" imbue
+"d" "Name" imbue
+"Controls.Add" imbue

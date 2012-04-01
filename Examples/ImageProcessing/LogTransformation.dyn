@@ -1,0 +1,12 @@
+-- Form for Log Transformation
+form new
+label new 
+"ConstantLabel" "Name" imbue
+13 12 point "Location" imbue
+63 13 size "Size" imbue
+"Controls.Add" imbue
+textbox new
+"constant" "Name" imbue
+80 12 point "Location" imbue
+"Controls.Add" imbue
+return

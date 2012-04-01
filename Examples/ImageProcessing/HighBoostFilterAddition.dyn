@@ -1,0 +1,11 @@
+-- HighBoost Filter Additions
+label new
+"weightLabel" "Name" imbue
+"Weight" "Text" imbue
+13 52 point "Location" imbue
+63 13 size "Size" imbue
+"Controls.Add" imbue
+textbox new
+"weight" "Name" imbue
+80 52 point "Location" imbue
+"Controls.Add" imbue
