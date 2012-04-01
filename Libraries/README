@@ -1,0 +1,10 @@
+This folder needs to contain the following libraries:
+Extensions
+Starlight
+Tycho
+Collections
+LexicalAnalysis
+Parser
+
+These libraries are critical to the Omnicron language
+

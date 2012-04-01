@@ -1,7 +1,12 @@
-Filter is a library that supports cross application domain plugins. It has a
-FormConstructionLanguage that is used to define a simple GUI without actually
-defining the GUI as code. This prevents crashes from occuring.
+The Omnicron programming language is designed to simplify the construction of
+GUI forms that are centered around extracting input from common control sets. 
 
-This library is licensed under the BSD license
 
-Oh! This library requires a ton of other libraries to be valid
+It is a stack based langauge that greatly simplifies the act of form
+construction and data acquisition. It also allows plugins to be located in
+another application domain yet provide local GUI forms in the primary domain
+without fear of copying libraries over to the current domain. 
+
+Eventually, Omnicron will have a complete tool set which includes tools to
+allow programmers to test their scripts before embedding them as strings in a
+given program. 
