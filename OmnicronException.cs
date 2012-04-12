@@ -24,47 +24,18 @@
 //authors and should not be interpreted as representing official policies, either expressed
 //or implied, of Joshua Scoggins. 
 using System;
-using System.Reflection;
-using System.Text;
-using System.Runtime;
-using System.Linq;
-using System.IO;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using Libraries.LexicalAnalysis;
-using Libraries.Extensions;
-using Libraries.Parsing;
-using Libraries.Starlight;
-using Libraries.Tycho;
-using System.Diagnostics;
-using System.Windows.Forms;
+using System.Linq;
+using System.Text;
 using System.Drawing;
-using Languages.Omnicron;
+using System.Collections;
+using System.Windows.Forms;
 
-namespace Languages.Omnicron.Interpreter
+namespace Languages.Omnicron
 {
-	public static class Interpreter
+	public class OmnicronException : Exception
 	{
-		public static void Main(string[] args)
-		{
-			if(args.Length == 0)
-				Console.WriteLine("No files provided");
-			else
-			{
-				OmnicronLanguage language = new OmnicronLanguage();
-				foreach(var v in args)
-				{
-					try
-					{
-					DynamicForm dynForm = language.ConstructForm(File.ReadAllText(v));
-					dynForm.ShowDialog();
-					}
-					catch(OmnicronException e)
-					{
-						Console.WriteLine(e.Message);
-					}
-				}
-			}
-		}
+		public OmnicronException(string message) : base(message) { }
+		public OmnicronException(string message, Exception innerException) : base(message, innerException) { }
 	}
 }
