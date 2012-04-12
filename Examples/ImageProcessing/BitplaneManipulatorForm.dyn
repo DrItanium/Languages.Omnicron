@@ -1,6 +1,7 @@
 -- Bitplane Manipulator Form
 form new
 "Bitplane Manipulation" "Name" imbue
+"Bitplane Manipulation" "Text" imbue
 label new 
 "Plane 0" "Text" imbue
 13 12 point "Location" imbue
