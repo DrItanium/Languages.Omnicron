@@ -333,7 +333,7 @@ namespace Languages.Omnicron
 			{
 				var aCell = pairA.Value;
 				var bCell = b[pairA.Key];
-				result = result && (aCell.Equals(bCell));
+				result &= (aCell.Equals(bCell));
 			}
 			return result;
 		}
