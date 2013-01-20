@@ -1,0 +1,11 @@
+This library contains structures used to store different types of data. 
+I do not believe that these structures are fast or better than any other
+implementation. They are simply what I created to solve problems during the
+last four years.
+
+This library depends on the Extensions library to work properly so you will
+need to pull that down as well
+
+As with the Extensions library, the Collections library is licensed under the
+BSD license. I don't care what you do with it just follow the rules outlined by
+the license.
