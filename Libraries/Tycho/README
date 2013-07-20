@@ -1,0 +1,6 @@
+This is the frontend to the LexicalAnalysis backend. 
+
+It requires LexicalAnalysis, Collections, and Extensions to compile properly. 
+
+It's also licensed under the BSD license
+

@@ -6,12 +6,8 @@ cmd_library := -t:library
 cmd_out := -out:$(name)
 cmd_compiler := dmcs
 sources := *.cs 
-lib_dir := -lib:../LexicalAnalysis/ \
-           -lib:../Collections/ \
-           -lib:../Extensions/ \
-			  -lib:../Starlight/ \
-			  -lib:../Tycho/ \
-			  -lib:../Parser/ 
+lib_dir := $(root)/Libraries
+
 options := -r:Libraries.Collections.dll \
            -r:Libraries.LexicalAnalysis.dll \
 			  -r:Libraries.Extensions.dll \
@@ -25,12 +21,18 @@ options := -r:Libraries.Collections.dll \
 result := $(name)
 
 build: copy
-> dmcs -optimize $(options) $(lib_dir) $(cmd_library) $(cmd_out) $(sources)
+> dmcs -optimize $(options) $(cmd_library) $(cmd_out) $(sources)
 debug: copy 
-> dmcs -debug $(options) $(lib_dir) $(cmd_library) $(cmd_out) $(sources)
-.PHONY : clean
+> dmcs -debug $(options) $(cmd_library) $(cmd_out) $(sources)
+
 clean: 
 > -rm -f *.dll *.mdb *.exe
+> cd $(lib_dir)/Collections && $(MAKE) clean
+> cd $(lib_dir)/LexicalAnalysis && $(MAKE) clean
+> cd $(lib_dir)/Extensions && $(MAKE) clean
+> cd $(lib_dir)/Starlight && $(MAKE) clean
+> cd $(lib_dir)/Tycho && $(MAKE) clean
+> cd $(lib_dir)/Parser && $(MAKE) clean
 
 collections: extensions 
 > cd $(root)/Libraries/Collections && $(MAKE) 
@@ -51,10 +53,10 @@ lexical: collections
 > cd $(root)/Libraries/LexicalAnalysis && $(MAKE)
 
 copy: parser 
-> cd $(root)/Libraries/LexicalAnalysis/ && cp *.dll $(root)/; \
-> cd $(root)/Libraries/Extensions/ && cp *.dll $(root)/; \
-> cd $(root)/Libraries/Collections/ && cp *.dll $(root)/; \
-> cd $(root)/Libraries/Starlight/ && cp *.dll $(root)/; \
-> cd $(root)/Libraries/Tycho/ && cp *.dll $(root)/; \
-> cd $(root)/Libraries/Parser/ && cp *.dll $(root)/; 
+> cd $(lib_dir)/LexicalAnalysis/ && cp *.dll $(root)/; \
+> cd $(lib_dir)/Extensions/ && cp *.dll $(root)/; \
+> cd $(lib_dir)/Collections/ && cp *.dll $(root)/; \
+> cd $(lib_dir)/Starlight/ && cp *.dll $(root)/; \
+> cd $(lib_dir)/Tycho/ && cp *.dll $(root)/; \
+> cd $(lib_dir)/Parser/ && cp *.dll $(root)/; 
 		
