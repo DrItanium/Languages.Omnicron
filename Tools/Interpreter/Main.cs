@@ -43,28 +43,28 @@ using Languages.Omnicron;
 
 namespace Languages.Omnicron.Interpreter
 {
-	public static class Interpreter
-	{
-		public static void Main(string[] args)
-		{
-			if(args.Length == 0)
-				Console.WriteLine("No files provided");
-			else
-			{
-				OmnicronLanguage language = new OmnicronLanguage();
-				foreach(var v in args)
-				{
-					try
-					{
-					DynamicForm dynForm = language.ConstructForm(File.ReadAllText(v));
-					dynForm.ShowDialog();
-					}
-					catch(OmnicronException e)
-					{
-						Console.WriteLine(e.Message);
-					}
-				}
-			}
-		}
-	}
+  public static class Interpreter
+  {
+    public static void Main(string[] args)
+    {
+      if(args.Length == 0)
+        Console.WriteLine("No files provided");
+      else
+      {
+        OmnicronLanguage language = new OmnicronLanguage();
+        foreach(var v in args)
+        {
+          try
+          {
+            DynamicForm dynForm = language.ConstructForm(File.ReadAllText(v));
+            dynForm.ShowDialog();
+          }
+          catch(OmnicronException e)
+          {
+            Console.WriteLine(e.Message);
+          }
+        }
+      }
+    }
+  }
 }
